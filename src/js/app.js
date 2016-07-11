@@ -157,10 +157,10 @@ function initMap(){
 
             console.log(info);
             var googleContent = {
-                  content: '<div><a href="' + info.website || '' + '">' + info.name || '' + '</a><p>' + info.formatted_address || + '</p><p>'+ info.price_level || '' + '</p><p>' + info.website || '' + '</p><p>' + info.rating || '' + '</p></div>'
+                  content: '<div><a href="' + (info.website || '') + '">' + (info.name || '') + '</a><p>' + (info.formatted_address || '') + '</p><p>'+ (info.price_level || '') + '</p><p>' + (info.website || '') + '</p><p>' + (info.rating || '') + '</p></div>'
             };
             var FSquareContent = {
-                  content: '<div><p>' + info.name || '' + '</p><p>' + info.formatted_address || '' + '</p><p>'+ info.users || '' + '</p><p>' + info.url || '' + '</p><p>' + info.checkin || '' + '</p></div>'
+                  content: '<div><p>' + (info.name || '') + '</p><p>' + (info.formatted_address || '') + '</p><p>'+ (info.users || '') + '</p><p>' + (info.url || '') + '</p><p>' + (info.checkin || '') + '</p></div>'
             };
             //create infowindow
             if(info.type == 'google'){
@@ -175,6 +175,7 @@ function initMap(){
                         marker.setAnimation(null);
                   } else {
                         marker.setAnimation(google.maps.Animation.BOUNCE);
+                        setTimeout(function(){marker.setAnimation(null);}, 2000); //stop bouncing animation after 3 seconds.
                   }
                         infowindow.open(map, marker);
             });
@@ -390,6 +391,7 @@ function AppViewModel() {
                         if(marker.getPosition().lat() == data.position.lat && marker.getPosition().lng() == data.position.lng){
                               map.panTo({lat: marker.getPosition().lat(), lng: marker.getPosition().lng()});
                               marker.setAnimation(google.maps.Animation.BOUNCE);
+                              setTimeout(function(){marker.setAnimation(null);}, 4000); //stop bouncing animation after 4 seconds...The user might need an extra second to see the marker if the marker itself wasn't clicked.
                         } else {
                               marker.setAnimation(null);
                         }
