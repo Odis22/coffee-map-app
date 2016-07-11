@@ -157,10 +157,10 @@ function initMap(){
 
             console.log(info);
             var googleContent = {
-                  content: '<div><a href="' + if(info.website != undefined){ info.website } + '">' + if(info.name != undefined) { info.name } + '</a><p>' + if(info.formatted_address != undefined){ info.formatted_address }  + '</p><p>'+ if(info.price_level != undefined){ info.price_level } + '</p><p>' + if(info.website != undefined){ info.website } + '</p><p>' + if(info.rating != undefined) { info.rating } + '</p></div>'
+                  content: '<div><a href="' + info.website || '' + '">' + info.name || '' + '</a><p>' + info.formatted_address || + '</p><p>'+ info.price_level || '' + '</p><p>' + info.website || '' + '</p><p>' + info.rating || '' + '</p></div>'
             };
             var FSquareContent = {
-                  content: '<div><p>' + if(info.name != undefined){ info.name } + '</p><p>' + if(info.formatted_address != undefined) { info.formatted_address }  + '</p><p>'+ if(info.users != undefined) { info.users } + '</p><p>' + if(info.url != undefined) { info.url } + '</p><p>' + if(info.checkin != undefined) { info.checkin } + '</p></div>'
+                  content: '<div><p>' + info.name || '' + '</p><p>' + info.formatted_address || '' + '</p><p>'+ info.users || '' + '</p><p>' + info.url || '' + '</p><p>' + info.checkin || '' + '</p></div>'
             };
             //create infowindow
             if(info.type == 'google'){
