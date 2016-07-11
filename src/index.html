@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+      <head>
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <meta name="description" content="description here">
+            <meta name="keywords" content="coffee">
+            <meta name="author" content="Scott Olsen">
+            <link href="css/main.css" rel="stylesheet">
+
+            <title></title>
+      </head>
+      <body>
+            <section class="loading-modal">
+                  <h1 class="page-title">Caffinator</h1>
+                  <h2 class="message">Finding coffee...</h2>
+                  <svg width="31px" height="31px" viewBox="0 0 31 31" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                      <!-- Generator: Sketch 3.8.3 (29802) - http://www.bohemiancoding.com/sketch -->
+                      <title>coffee-loader</title>
+                      <desc>Created with Sketch.</desc>
+                      <defs>
+                          <polygon id="path-1" points="8 14 8 24 22 24 22 14"></polygon>
+                          <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="14" height="10" fill="white">
+                              <use xlink:href="#path-1"></use>
+                          </mask>
+                          <path d="M20,17 L22.9906311,17 C23.5480902,17 24,17.4426603 24,17.9989566 L24,19.0010434 C24,19.5527519 23.5566468,20 22.9906311,20 L20,20 L20,17 Z" id="path-3"></path>
+                          <mask id="mask-4" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="-2" y="-2" width="8" height="7">
+                              <rect x="18" y="15" width="8" height="7" fill="white"></rect>
+                              <use xlink:href="#path-3" fill="black"></use>
+                          </mask>
+                      </defs>
+                      <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                          <g id="coffee-loader">
+                              <use id="cup" stroke="#4A4A4A" mask="url(#mask-2)" stroke-width="6" fill="#4A4A4A" xlink:href="#path-1"></use>
+                              <path d="M10.0606061,25.5 L19.8484848,25.5" id="base" stroke="#4A4A4A"></path>
+                              <use id="handle" stroke="#4A4A4A" mask="url(#mask-4)" stroke-width="4" xlink:href="#path-3"></use>
+                              <path d="M10,14 L19,14" id="coffee" stroke="#C19892" stroke-width="2" stroke-linecap="square"></path>
+                              <path d="M8.00025154,13.5 L21,13.5" id="lid" stroke="#4A4A4A"></path>
+                              <polyline id="smoke-left" stroke="#DDDDDD" points="10.7412048 11.9370117 10 9.74682617 11 6.66918945 10.0857831 5"></polyline>
+                              <polyline id="smoke-right" stroke="#9F9E9E" transform="translate(18.500000, 8.500000) scale(-1, 1) translate(-18.500000, -8.500000) " points="18.7412048 12 18 9.7899275 19 6.68434575 18.0857831 5"></polyline>
+                              <polyline id="smoke-mid" stroke="#C5C5C5" points="14.7412048 13.5756836 14 11.6574406 15 8.96193597 14.0857831 7.5"></polyline>
+                          </g>
+                      </g>
+                  </svg>
+            </section>
+
+            <section class="mobile-control" data-bind="click: toggleShowMenu">
+                        <svg class="menu-control" width="60px" height="60px" viewBox="0 0 60 60" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                <g id="menu.svg">
+                                    <rect id="bg" fill="#2B2B2B" x="0" y="0" width="60" height="60"></rect>
+                                    <path d="M18,20 L43,20" id="line-three" stroke="#FFFFFF" stroke-width="2"></path>
+                                    <path d="M18,30 L43,30" id="line-two" stroke="#FFFFFF" stroke-width="2"></path>
+                                    <path d="M18,40 L43,40" id="line-one" stroke="#FFFFFF" stroke-width="2"></path>
+                                </g>
+                            </g>
+                        </svg>
+            </section>
+
+
+            <section class="main-controls">
+                  <button class="show-controls-button" data-bind="click: toggleShowIntro">Show Home</button>
+                  <button class="show-controls-button" data-bind="click: toggleShowControls">Show Controls</button>
+                  <button class="show-info" data-bind="click: toggleShowInfo">Show Info</button>
+                  <button class="search-button" data-bind="click: coffeeSearch">Find Coffee</button>
+                  <input class="search-input" data-bind="value: searchString">
+            </section>
+
+            <section class="error-window" data-bind="visible: errorExists">
+                  <div class="error-box">
+                        <p> ERROR: <span data-bind="text: errorMessage"></span></p>
+                        <button class="close-error-button" data-bind="click: toggleError">Close</button>
+                  </div>
+            </section>
+
+            <section class="main-content">
+                  <section class="intro-view" data-bind="visible: showIntro">
+                       
+                        <section class="mobile-access" data-bind="visible: showMenu">
+                        <div class="row">
+                              <button class="hide-menu" data-bind="click: toggleShowMenu">Close Menu</button>
+                        </div>
+                        <div class ="row">
+                              <button class="show-controls-button" data-bind="click: toggleShowIntro">Show Home</button>
+                              <button class="show-controls-button" data-bind="click: toggleShowControls">Show Controls</button>
+                              <button class="show-info" data-bind="click: toggleShowInfo">Show Info</button>
+                        </div>
+                        <div class="row" >
+                              <button class="search-button" data-bind="click: coffeeSearch">Find Coffee</button>
+                              <input class="search-input" data-bind="value: searchString">
+                        </div>
+                        </section>
+                        
+                        <div class="row">
+                              <img src="img/coffee-map-icon.png" alt="coffee-map-icon">
+                        </div>
+                        <div class="row">
+                              <h1>Caffinator</h1>
+                              <p>An app by Scott Olsen.</p>
+                        </div>
+                        <div class="row">
+                              <h1>Last Search</h1>
+                              <p data-bind="text: searchString"></p>
+                        </div>
+                        <div class="row">
+                              <h1>Try a Preset Search</h1>
+                              <div class="preset-searches">
+                                    <button data-bind="click: presetSearch.bind($data, 'ny')">New York</button>
+                                    <button data-bind="click: presetSearch.bind($data, 'phil')">Philadelphia</button>
+                                    <button data-bind="click: presetSearch.bind($data, 'chi')">Chicago</button>
+                                    <button data-bind="click: presetSearch.bind($data, 'sea')">Seattle</button>
+                                    <button data-bind="click: presetSearch.bind($data, 'den')">Denver</button>
+                              </div>
+                        </div>
+                  </section>
+                  <!--Note the binding to call ko functions-->
+                  <section class="controls" data-bind="visible: showControls">
+
+                         <section class="mobile-access" data-bind="visible: showMenu">
+                        <div class="row">
+                              <button class="hide-menu" data-bind="click: toggleShowMenu">Close Menu</button>
+                        </div>
+                        <div class ="row">
+                              <button class="show-controls-button" data-bind="click: toggleShowIntro">Show Home</button>
+                              <button class="show-controls-button" data-bind="click: toggleShowControls">Show Controls</button>
+                              <button class="show-info" data-bind="click: toggleShowInfo">Show Info</button>
+                        </div>
+                        <div class="row" >
+                              <button class="search-button" data-bind="click: coffeeSearch">Find Coffee</button>
+                              <input class="search-input" data-bind="value: searchString">
+                        </div>
+                        </section>
+
+                        <section class="search primary">
+                              <h2 class="section-header">Search for Coffee:</h2>
+                              <div class="row">
+                                    <input class="search-input" data-bind="value: searchString">
+                                    <button class="open-now button" data-bind="click: toggleOpenNow">Restrict Search to Open Now</button>
+                                    <button class="search-button" data-bind="click: coffeeSearch">Find Coffee</button>
+                              </div>
+                              <div class="row">
+                                    <p> Search for coffee within a <span data-bind="text: currentSearchRadius"></span> meter radius</p>
+                                    <button class="increase-radius button" data-bind="click: increaseRadius">+</button>
+                                    <button class="decrease-radius button" data-bind="click: decreaseRadius">-</button>
+                              </div>
+                        </section>
+                        
+                        <section class="filter primary">
+                              <h2 class="section-header">Filter Results</h2>
+                              <div class="row">
+                                    <input class="filter-input" data-bind="value: filterString">
+                                    <button class="filter-button" data-bind="click: addFilter.bind($data, 'name', $data.filterString())">Filter Results</button>
+                              </div>
+                              <div class="row">
+                              <p>Filter by Price:</p>
+                                    <button class="filter-price-one" data-bind="click: function(data, event){ addFilter( 'price', 1, buttonActive, data, event)}">$1</button>
+                                    <button class="filter-price-two" data-bind="click: function(data, event){ addFilter('price', 2, buttonActive, data, event)}">$2</button>
+                                    <button class="filter-price-three" data-bind="click: function(data, event) { addFilter('price', 3, buttonActive, data, event)}">$3</button>
+                                    <button class="filter-price-four" data-bind="click: function(data, event) { addFilter('price', 4, buttonActive, data, event)}">$4</button>
+                                    <button class="filter-price-five" data-bind="click: function(data, event){ addFilter('price', 5, buttonActive, data, event) }">$5</button>
+                              </div>
+                              <div class="row">
+                                    <button class="reset-filter-button" data-bind="click: resetFilter">Reset Filters</button>
+                              </div>
+                        </section>
+                  </section>
+
+                 <section class="filter-list primary" data-bind="visible: filterSet">
+                 <h2 class="section-header">Applied Filters</h2>
+                        <div data-bind="foreach: currentFilters">
+                              <div class="filter-info">
+                              <p><span class="filter-id" data-bind="text: id"></span></p>
+                              <p class="filter-type"><strong>Type:</strong> <span data-bind="text: type"></span></p>
+                              <p class="filter-value"><strong>Value:</strong> <span data-bind="text: val"></span></p>
+                              <button class="remove-filter-button" data-bind="click: $parent.removeFilter.bind($root, id)">X</button>
+                              </div>
+                        </div>
+                  </section>
+
+                  <!--info-template-->
+                  <section class="information-container" data-bind="visible: showInfo">
+
+                         <section class="mobile-access" data-bind="visible: showMenu">
+                        <div class="row">
+                              <button class="hide-menu" data-bind="click: toggleShowMenu">Close Menu</button>
+                        </div>
+                        <div class ="row">
+                              <button class="show-controls-button" data-bind="click: toggleShowIntro">Show Home</button>
+                              <button class="show-controls-button" data-bind="click: toggleShowControls">Show Controls</button>
+                              <button class="show-info" data-bind="click: toggleShowInfo">Show Info</button>
+                        </div>
+                        <div class="row" >
+                              <button class="search-button" data-bind="click: coffeeSearch">Find Coffee</button>
+                              <input class="search-input" data-bind="value: searchString">
+                        </div>
+                        </section>
+
+                        <div data-bind="foreach: information">
+                             <!-- ko if: (type == 'google') -->
+                              <div class="google-info" data-bind="visible: show">
+                                    <article class="place-data">
+                                          <a class="shop-name" data-bind="attr: {href: website}"><h3 data-bind="text: name"></h3></a>
+                                          <p class="shop-address" data-bind="text: formatted_address"></p>
+                                          <p class="shop-price-level" data-bind="text: price_level"></p>
+                                          <p class="shop-open" data-bind="if: open_now">Yes, we're open!</p>
+                                          <button class="show-on-map button" data-bind="click: $parent.markerTrigger">Show on Map</button>
+                                    </article>
+                              </div>
+                              <!-- /ko -->
+                              <!-- ko if: (type == 'foursquare') -->
+                              <div class="foursquare-info" data-bind="visible: show">
+                                    <article class="place-data">
+                                          <a class="shop-name" data-bind="attr: {href: url}"><h3 data-bind="text: name"></h3></a>
+                                          <p class="shop-address" data-bind="text: formatted_address"></p>
+                                          <p class="shop-checkins"> Number of Foursquare Checkins: <span data-bind="text: checkin"></span></p>
+                                          <button class="show-on-map button" data-bind="click: $parent.markerTrigger">Show on Map</button>
+                                    </article>
+                                    <p class="foursquare-attribution">Data powered by Foursquare<img src="img/small-foursquare-icon.png" alt="foursquare-icon-attribution"></p>
+                              </div>
+                              <!-- /ko -->
+                        </div>
+                  </section>
+            </section>
+            <section id="map-view"></section>
+
+
+            <!--load scripts-->
+            <script src="libs/bower_components/knockout/dist/knockout.js"></script>
+            <script src="libs/bower_components/jquery/dist/jquery.min.js"></script>
+            <script src="js/models/models.min.js"></script>
+            <script src="js/main.min.js"></script>
+            <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAfBb6TDIxE-uYJaHe-rZ-mJhN0PZyIylE&libraries=places&callback=initMap"></script>
+      </body>
+</html>

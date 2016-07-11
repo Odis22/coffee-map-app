@@ -1,0 +1,11 @@
+#OS Files# 
+.DS_Store 
+
+#sass-cache
+.sass-cache
+
+#Utility Scripts#
+*.sh
+
+#node#
+/node_modules

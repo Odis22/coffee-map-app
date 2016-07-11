@@ -1,0 +1,40 @@
+{
+  "name": "coffee-map-app",
+  "version": "1.0.0",
+  "description": "An app that utilizies serval apis to provide information on nearby coffee shops.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/scolsen/frontend-nano-map.git"
+  },
+  "keywords": [
+    "coffee",
+    "finder",
+    "map",
+    "app"
+  ],
+  "author": "Scott Olsen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/scolsen/frontend-nano-map/issues"
+  },
+  "homepage": "https://github.com/scolsen/frontend-nano-map#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-clean-css": "^2.0.10",
+    "gulp-concat": "^2.6.0",
+    "gulp-concat-css": "^2.3.0",
+    "gulp-htmlmin": "^2.0.0",
+    "gulp-jsmin": "^0.1.5",
+    "gulp-rename": "^1.2.2",
+    "gulp-ruby-sass": "^2.0.6",
+    "gulp-serve": "^1.4.0",
+    "gulp-webserver": "^0.9.1",
+    "main-bower-files": "^2.13.1",
+    "ngrok": "^2.2.1",
+    "psi": "^2.0.4"
+  }
+}

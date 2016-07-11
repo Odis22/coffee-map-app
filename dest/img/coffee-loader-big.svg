@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="71px" height="55px" viewBox="0 0 71 55" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 3.8.3 (29802) - http://www.bohemiancoding.com/sketch -->
+    <title>coffee-loader-big</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <polygon id="path-1" points="18 25 18 48 50 48 50 25"></polygon>
+        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="32" height="23" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+        <path d="M45,32 L53.0024554,32 C53.553384,32 54,32.4378814 54,33.0029293 L54,37.9970707 C54,38.5509732 53.5536886,39 53.0024554,39 L45,39 L45,32 Z" id="path-3"></path>
+        <mask id="mask-4" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="-2" y="-2" width="13" height="11">
+            <rect x="43" y="30" width="13" height="11" fill="white"></rect>
+            <use xlink:href="#path-3" fill="black"></use>
+        </mask>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="coffee-loader-big">
+            <use id="cup" stroke="#F6F2F2" mask="url(#mask-2)" stroke-width="6" fill="#F6F2F2" xlink:href="#path-1"></use>
+            <path d="M23,50 L45.226869,50" id="base" stroke="#F6F2F2" stroke-width="2"></path>
+            <use id="handle" stroke="#F6F2F2" mask="url(#mask-4)" stroke-width="4" xlink:href="#path-3"></use>
+            <polyline id="smoke-left" stroke="#DDDDDD" points="24.6831698 20.7529587 23 15.7793615 25.2708566 8.79048986 23.1948012 5"></polyline>
+            <polyline id="smoke-right" stroke="#9F9E9E" points="41.5175904 21 43 15.9484057 41 8.84993313 42.8284337 5"></polyline>
+            <polyline id="smoke-mid" stroke="#C5C5C5" points="33.6831698 24.7970061 32 20.4409513 34.2708566 14.3198469 32.1948012 11"></polyline>
+        </g>
+    </g>
+</svg>

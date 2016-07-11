@@ -1,0 +1,150 @@
+/*css animation handling*/
+
+/*rotate entire coffee pot*/
+
+@keyframes smokeMid {
+      0% {
+            opacity:0;
+            transform: translateY(0px);
+      }
+      100% {
+            opacity:1;
+            transform: translateY(-6px);
+      }
+}
+
+@keyframes smokeLeft {
+      0% {
+            opacity:0;
+            transform: translateY(0px);
+      }
+      100% {
+            opacity:1;
+            transform: translateY(-8px);
+      }
+}
+
+@keyframes smokeRight {
+      0% {
+            opacity:0;
+            transform: translateY(0px);
+      }
+      100% {
+            opacity:1;
+            transform: translateY(-4px);
+      }
+}
+
+@keyframes colorVariance {
+      0% {
+            stroke: #9F9E9E;
+      }
+      50% {
+            stroke: #C5C5C5;
+      }
+      100% {
+            stroke: #DDDDDD;
+      }
+}
+
+@keyframes menuSlide {
+      0% {
+            left: -1000px;
+            opacity: 0;
+      }
+      100% {
+            left: 0px;
+            opactiy: 1;
+      }
+}
+
+@keyframes menuSlideReverse {
+      0% {
+            left: 0px;
+            opacity: 1;
+      }
+      100% {
+            left: -1000px;
+            opacity: 0;
+      }
+}
+
+@keyframes menuColorShift {
+      0% {
+            stroke: #FFFFFF;
+      }
+      100%{
+            stroke: #DC381F;
+      }
+}
+
+@keyframes errorColorShift {
+      0% {
+            background-color: #333;
+            color: #DC381F;
+      }
+      100%{
+            background-color: #DC381F;
+            color: #fff;
+      }
+}
+
+#smoke-mid {
+      animation:smokeMid 2s ease-in infinite, colorVariance 0.8s 1.4s ease-in infinite;
+}
+
+#smoke-left {
+      animation:smokeLeft 2.3s ease-in infinite, colorVariance 0.8s 1s ease-in infinite;
+}
+
+#smoke-right{
+      animation:smokeRight 1.6s ease-in infinite, colorVariance 0.8s 2.3s ease-in infinite;
+}
+
+/*Menu icon*/
+
+#line-one {
+      animation: menuColorShift 0.8s ease-in infinite;
+}
+
+#line-two {
+      animation: menuColorShift 0.8s 1.6s ease-in infinite;
+}
+
+#line-three {
+      animation: menuColorShift 0.8s 2.4s ease-in infinite;
+}
+
+
+/*interactions*/
+
+button {
+      transition: color 0.8s, background-color 0.8s, border 0.8s;
+}
+
+button:hover {
+      background-color: #DC381F;
+      color: #FEFCFF;
+      border: 2px solid #FEFCFF;
+}
+
+/*Active States*/
+
+.button-active {
+      background-color: #DC381F;
+      color: #FEFCFF;
+      border: 2px solid #FEFCFF;
+}
+
+.mobile-on {
+      animation: menuSlide 0.8s ease-in 1;
+      animation-fill-mode: forwards;
+}
+
+.mobile-off {
+      animation: menuSlideReverse 0.8s ease-in 1;
+}
+
+.error-box {
+      animation: errorColorShift 2s ease-in infinite alternate;
+}

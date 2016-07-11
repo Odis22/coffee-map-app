@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="60px" height="60px" viewBox="0 0 60 60" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 3.8.3 (29802) - http://www.bohemiancoding.com/sketch -->
+    <title>coffee-icon-big-inverse</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="coffee-icon-big-inverse">
+            <polygon id="cup" stroke="#FFFFFF" stroke-width="3" fill="#FFFFFF" points="15.5 19.5 15.5 38.5 40.5 38.5 40.5 19.5"></polygon>
+            <path d="M18,42 L38,42" id="base" stroke="#FFFFFF" stroke-width="2"></path>
+            <path d="M38.5,22.5 L42.5,22.5 C44.709139,22.5 46.5,24.2965212 46.5,26.4958262 L46.5,30.5041738 C46.5,32.7110077 44.7046438,34.5 42.5,34.5 L38.5,34.5 L38.5,22.5 Z" id="handle" stroke="#FFFFFF" stroke-width="3"></path>
+            <path d="M14,18.5 L39,18.5" id="cover" stroke="#FFFFFF" stroke-width="3"></path>
+            <path d="M16.5,19 L38,19" id="opening" stroke="#2B2B2B" stroke-width="2" stroke-linecap="square"></path>
+        </g>
+    </g>
+</svg>

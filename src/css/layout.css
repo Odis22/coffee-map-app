@@ -1,0 +1,287 @@
+/*Layout.scss*/
+* {
+  margin: 0;
+  padding: 0; }
+
+body {
+  height: 100%; }
+
+input {
+  height: 40px;
+  width: 120px;
+  padding: 4px; }
+
+button {
+  height: 40px;
+  min-width: 40px;
+  padding: 4px;
+  border: 2px solid #DC381F;
+  background-color: #FEFCFF;
+  margin: 10px;
+  float: left; }
+
+header {
+  background-color: #333;
+  color: #fff;
+  padding-left: 10px;
+  padding-top: 10px;
+  border-bottom: 4px solid #FA563D; }
+
+.page-title {
+  width: 100%;
+  text-align: center;
+  margin-top: 40vh; }
+
+.message {
+  width: 100%;
+  text-align: center;
+  margin-top: 10px; }
+
+.row {
+  float: left;
+  width: 100%; }
+
+.main-content {
+  background-color: #FEFCFF;
+  height: 100vh;
+  width: 49%;
+  float: left;
+  overflow-y: scroll;
+  border-right: solid 2px #333; }
+
+.controls {
+  background-color: #FEFCFF; }
+
+.primary {
+  margin-left: 10%;
+  margin-right: 10%;
+  background-color: #FA563D;
+  width: 80%;
+  float: left;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  border-top: 4px solid #333; }
+
+.section-header {
+  padding: 8px;
+  color: #FEFCFF;
+  background-color: #333; }
+
+/*Information container */
+.information-container {
+  overflow-y: scroll;
+  overflow-x: hidden;
+  width: 100%;
+  height: 100vh; }
+
+.google-info {
+  background-color: #333;
+  padding: 20px;
+  border-bottom: 4px solid #555;
+  float: left;
+  width: 100%;
+  color: #333; }
+
+.foursquare-info {
+  float: left;
+  width: 100%;
+  background-color: #FEFCFF;
+  padding: 20px;
+  border-bottom: 4px solid #555;
+  color: #333; }
+
+.place-data {
+  background-color: whitesmoke;
+  width: 80%;
+  float: left;
+  padding: 20px;
+  border: solid 2px #333; }
+
+.place-data p {
+  float: left;
+  width: 40%;
+  margin-top: 10px; }
+
+.shop-name {
+  color: #FA563D; }
+
+.foursquare-attribution {
+  width: 100%;
+  float: left; }
+
+.foursquare-attribution img {
+  margin-left: 10px;
+  margin-top: 10px; }
+
+.show-on-map-button {
+  float: right; }
+
+/*Search*/
+.search p {
+  margin: 10px; }
+
+.search-input {
+  margin: 10px;
+  float: left;
+  width: 40%; }
+
+/*Filters */
+.filter-input {
+  margin: 10px;
+  float: left;
+  width: 40%; }
+
+.filter p {
+  margin: 10px; }
+
+.filter-info {
+  background: linear-gradient(to bottom, #e5e5e5 47%, #ede6e6 100%);
+  float: left;
+  width: 90%;
+  margin-bottom: 10px;
+  box-shadow: 2px 3px 3px #333;
+  border: solid 6px #333;
+  margin-left: 5%;
+  margin-right: auto;
+  border-radius: 4px;
+  margin-top: 10px; }
+
+.filter-type {
+  margin-top: 8px;
+  float: left;
+  margin-left: 4px; }
+
+.filter-value {
+  margin-top: 8px;
+  float: left;
+  margin-left: 4px; }
+
+.filter-id {
+  float: left;
+  border: 2px solid #333;
+  padding: 20px;
+  box-shadow: 4px 0px 3px #333;
+  background-color: #DC381F;
+  color: #FEFCFF;
+  margin: 8px; }
+
+.remove-filter-button {
+  float: right;
+  margin: 8px;
+  top: 0;
+  box-shadow: 0px 2px 3px #333;
+  color: #DC381F; }
+
+.main-controls {
+  background-color: #DC381F;
+  float: left;
+  width: 100%;
+  height: 10vh; }
+
+.main-controls .search-button {
+  height: 52px;
+  float: right;
+  margin-right: 2%; }
+
+.main-controls .search-input {
+  float: right; }
+
+/*Intro View */
+.intro-view {
+  background-color: #FEFCFF;
+  height: 100vh; }
+
+.intro-view img {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 120px; }
+
+.intro-view .row {
+  text-align: center;
+  margin-top: 20px; }
+
+.preset-searches {
+  margin-left: 20%;
+  float: left;
+  width: 80%;
+  display: block; }
+
+.intro-view p {
+  color: #DC381F; }
+
+/*loading modal*/
+.loading-modal {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #fff;
+  position: absolute;
+  z-index: 20; }
+
+.loading-modal p {
+  margin-left: auto;
+  margin-right: auto;
+  float: left;
+  width: 100%;
+  text-align: center;
+  font-weight: bold; }
+
+.loading-modal svg {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10vh;
+  float: left;
+  width: 100%; }
+
+.mobile-control {
+  margin-top: 50vh;
+  position: absolute;
+  display: none;
+  z-index: 10; }
+
+#map-view {
+  height: 100vh;
+  width: 50%;
+  float: left; }
+
+.error-box {
+  float: left;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+  background-color: #333;
+  position: absolute;
+  width: 100%;
+  color: #DC381F;
+  z-index: 40; }
+
+.error-box p {
+  float: left;
+  padding: 20px; }
+
+.close-error-button {
+  float: left; }
+
+/* mediaQueries */
+@media screen and (max-width: 740px) {
+  .main-content {
+    width: 100%;
+    position: absolute;
+    left: -1000px;
+    z-index: 20;
+    height: 100vh;
+    border: none; }
+
+  .main-controls {
+    display: none; }
+
+  #map-view {
+    width: 100%; }
+
+  .mobile-control {
+    display: block;
+    width: 80px; }
+
+  .menu-control {
+    height: 60px;
+    margin: 0; } }
