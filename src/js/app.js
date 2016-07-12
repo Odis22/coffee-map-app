@@ -163,9 +163,18 @@ function initMap(){
             var googleContent = {
                   content: '<div><a href="' + (info.website || '') + '">' + (info.name || '') + '</a><p>' + (info.formatted_address || '') + '</p><p>'+ (info.price_level || '') + '</p><p>' + (info.website || '') + '</p><p>' + (info.rating || '') + '</p></div>'
             };
+
             var FSquareContent = {
                   content: '<div><p>' + (info.name || '') + '</p><p>' + (info.formatted_address || '') + '</p><p>'+ (info.users || '') + '</p><p>' + (info.url || '') + '</p><p>' + (info.checkin || '') + '</p></div>'
             };
+
+            //fallback in case info is somehow undefined or empty. 
+
+            if(info == undefined || info.length <= 0) {
+                  googleContent.content = '<p>No Data Found</p>';
+                  FSquareContent.content = '<p>No Data Found</p>';
+            }
+
             //create infowindow
             if(info.type == 'google'){
                   var infowindow = infoGen(googleContent);
@@ -313,9 +322,7 @@ function initMap(){
                         //update viewModel with resulting information model
                         viewModel.getInfo();
                         createMarker(info);
-                  } else if (status !== google.maps.places.PlacesServiceStatus.OK) {
-                  viewModel.errorHandle("Couldn't retrieve coffee shop information.");
-            }
+                  } 
             });
       }
 
