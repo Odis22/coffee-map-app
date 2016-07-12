@@ -229,6 +229,6 @@
             <script src="libs/bower_components/jquery/dist/jquery.min.js"></script>
             <script src="js/models/models.min.js"></script>
             <script src="js/main.min.js"></script>
-            <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAfBb6TDIxE-uYJaHe-rZ-mJhN0PZyIylE&libraries=places&callback=initMap"></script>
+            <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAfBb6TDIxE-uYJaHe-rZ-mJhN0PZyIylE&libraries=places&callback=initMap" onerror="viewModel.errorHandle('Could not load Google Maps. Try reloading the application and ensure you have a working internet connection.');"></script>
       </body>
 </html>
