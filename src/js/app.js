@@ -123,6 +123,8 @@ function initMap(){
             if(status == google.maps.places.PlacesServiceStatus.OK){
                   updateMapLocation(data[0]);
                   viewModel.updateLoad();
+            } else if (status !== google.maps.places.PlacesServiceStatus.OK) {
+                  viewModel.errorHandle("Couldn't find the input location. Sorry, try another search.");
             }
       }
 
@@ -135,6 +137,8 @@ function initMap(){
                         searchPlaceInfo(data[counter]);
                         counter++;
                   });
+            } else if (status !== google.maps.places.PlacesServiceStatus.OK) {
+                  viewModel.errorHandle("Couldn't find any coffee shops in this location. Sorry, try another search.");
             }
       }
 
@@ -309,7 +313,9 @@ function initMap(){
                         //update viewModel with resulting information model
                         viewModel.getInfo();
                         createMarker(info);
-                  }
+                  } else if (status !== google.maps.places.PlacesServiceStatus.OK) {
+                  viewModel.errorHandle("Couldn't retrieve coffee shop information.");
+            }
             });
       }
 
