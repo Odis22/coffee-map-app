@@ -137,4 +137,4 @@ gulp.task('webserver', function(){
   }); 
 
 //Runs all tasks in array when using `gulp`
-gulp.task('default', ['bowerCopy', 'htmlMin', 'jsMin',  'clean' ]);
+gulp.task('default', ['bowerCopy', 'htmlMin', 'jsMin',  'clean', 'webserver' ]);
