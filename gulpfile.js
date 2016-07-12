@@ -129,7 +129,7 @@ gulp.task('watch' , function(){
 /*===========Gulp Serve===============*/
 
 gulp.task('webserver', function(){
-    gulp.src('src')
+    gulp.src('dest')
         .pipe(webserver({
             livereload: true,
             port: 4000
