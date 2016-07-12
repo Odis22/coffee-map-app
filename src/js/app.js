@@ -15,6 +15,7 @@ var ver = '20160621'
 var mapsKey = 'AIzaSyAfBb6TDIxE-uYJaHe-rZ-mJhN0PZyIylE'
 var markerIcon = "../img/coffee-map-icon-small.png"
 var geoRun; //check if the current search was run with Geopoistion. 
+var googleErr; //used to kill loading screen if googlemaps fails. 
 
 /*Map Api Calls*/
 
